@@ -2,8 +2,9 @@ module mainController( control_signal, Opcode, Aluop);
 	input [6:0] Opcode;
 	output [1:0] Aluop;//ALUSrc,MemtoReg,RegWrite, MemRead, MemWrite, Branch,jump,
 	output reg [9:0] control_signal;
+	output reg RegWrite, MemWrite, MemRead, Branch, ALUSrc, Alu0, Alu1,jump, ALU_En, mem_reg;
 	assign {RegWrite, MemWrite, MemRead, Branch, ALUSrc, Alu0, Alu1,jump, ALU_En, mem_reg} = control_signal;
-
+	assign Aluop={Alu0, Alu1};
 	always @(*)
 	begin
 		case(Opcode)
