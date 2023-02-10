@@ -28,43 +28,43 @@ module alu_control (instr,alu_op,out_to_alu, equal_comp, mem, ALU_En);
 				case(funct)
 				4'b0000:
 					begin
-						out_to_alu <= 0010;
+						out_to_alu <= 4'b0010;
 					end
 				4'b0001:
 					begin
-						out_to_alu <= 0110;
+						out_to_alu <= 4'b0110;
 					end
 				4'b1000:
 					begin
-						out_to_alu <= 0011;
+						out_to_alu <= 4'b0011;
 					end
 				4'b1100:
 					begin
-						out_to_alu <= 0001;
+						out_to_alu <= 4'b0001;
 					end
 				4'b1110:
 					begin
-						out_to_alu <= 0000;
+						out_to_alu <= 4'b0000;
 					end
 				4'b0010:
 					begin
-						out_to_alu <= 0100;
+						out_to_alu <= 4'b0100;
 					end
 				4'b1010:
 					begin
-						out_to_alu <= 1000;
+						out_to_alu <= 4'b1000;
 					end
 				4'b1011:
 					begin
-						out_to_alu <= 1001;
+						out_to_alu <= 4'b1001;
 					end
 				4'b0100:
 					begin
-						out_to_alu <= 0101;
+						out_to_alu <= 4'b0101;
 					end
 				4'b0110:
 					begin
-						out_to_alu <= 0111;
+						out_to_alu <= 4'b0111;
 					end
 					
 					endcase
@@ -74,30 +74,30 @@ module alu_control (instr,alu_op,out_to_alu, equal_comp, mem, ALU_En);
 			case(funct3)
 			3'b000:
 				begin
-					out_to_alu <=0010;
+					out_to_alu <= 4'b0010;
 				end
 			3'b100:
 				begin
-					out_to_alu <= 0011;
+					out_to_alu <= 4'b0011;
 				end
 			3'b110:
 				begin
-					out_to_alu <= 0001;
+					out_to_alu <= 4'b0001;
 				end
 			3'b111:
 				begin
-					out_to_alu <= 0000;
+					out_to_alu <= 4'b0000;
 				end
 			3'b001:
 				begin
-					out_to_alu = 0100;
+					out_to_alu = 4'b0100;
 				end
 			3'b101:
 			begin
 				if (instr[30]==0)
-					out_to_alu <=1000;
+					out_to_alu <= 4'b1000;
 				else
-					out_to_alu <= 1001;
+					out_to_alu <= 4'b1001;
 			end
 			
 			endcase
@@ -108,28 +108,28 @@ module alu_control (instr,alu_op,out_to_alu, equal_comp, mem, ALU_En);
 				case(funct3)
 				3'b000:
 				begin
-					out_to_alu <= 0010;
-					mem<=001;
+					out_to_alu <= 4'b0010;
+					mem<= 3'b001;
 				end
 				3'b001:
 				begin
-					out_to_alu <= 0010;
-					mem<=010;
+					out_to_alu <= 4'b0010;
+					mem<= 3'b010;
 				end
 				3'b010:
 				begin
-					out_to_alu <= 0010;
-					mem<=011;
+					out_to_alu <= 4'b0010;
+					mem<= 3'b011;
 				end
 				3'b100:
 				begin
-					out_to_alu <= 0010;
-					mem<=101;
+					out_to_alu <= 4'b0010;
+					mem<= 3'b101;
 				end
 				3'b101:
 				begin
-					out_to_alu <= 0010;
-					mem<=011;
+					out_to_alu <= 4'b0010;
+					mem<= 3'b011;
 				end
 				
 				endcase
@@ -139,33 +139,33 @@ module alu_control (instr,alu_op,out_to_alu, equal_comp, mem, ALU_En);
 				case(funct3)
 				3'b000:
 				begin
-					out_to_alu <= 0011;
-					equal_comp <=11;
+					out_to_alu <= 4'b0011;
+					equal_comp <= 2'b11;
 				end
 				3'b001:
 				begin
-					out_to_alu <= 0011;
-					equal_comp <=10;
+					out_to_alu <= 4'b0011;
+					equal_comp <= 2'b10;
 				end
 				3'b100:
 				begin
-					out_to_alu <= 0101;
-					equal_comp <=11;
+					out_to_alu <= 4'b0101;
+					equal_comp <= 2'b11;
 				end
 				3'b101:
 				begin
-					out_to_alu <= 0101;
-					equal_comp<=10;
+					out_to_alu <= 4'b0101;
+					equal_comp<= 2'b10;
 				end
 				3'b110:
 				begin
-					out_to_alu <= 0111;
-					equal_comp <=11;
+					out_to_alu <= 4'b0111;
+					equal_comp <= 2'b11;
 				end
 				3'b111:
 				begin
-					out_to_alu <= 0111;
-					equal_comp <=10;
+					out_to_alu <= 4'b0111;
+					equal_comp <= 2'b10;
 				end
 				
 				endcase
