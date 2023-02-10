@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "02/10/2023 21:38:57"
+-- DATE "02/10/2023 22:33:06"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -35,9 +35,9 @@ ENTITY 	alu_control IS
     PORT (
 	instr : IN std_logic_vector(31 DOWNTO 0);
 	alu_op : IN std_logic_vector(1 DOWNTO 0);
-	out_to_alu : OUT std_logic_vector(3 DOWNTO 0);
-	equal_comp : OUT std_logic_vector(1 DOWNTO 0);
-	mem : OUT std_logic_vector(2 DOWNTO 0);
+	out_to_alu : BUFFER std_logic_vector(3 DOWNTO 0);
+	equal_comp : BUFFER std_logic_vector(1 DOWNTO 0);
+	mem : BUFFER std_logic_vector(2 DOWNTO 0);
 	ALU_En : IN std_logic
 	);
 END alu_control;

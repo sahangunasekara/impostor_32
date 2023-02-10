@@ -16,22 +16,22 @@
 
 */
 
-module alu (ScrA,ScrB,control,ALUResult,zero,Comparatorenable,equal_inequal);
+module alu (ScrA,ScrB,alu_control,ALUResult,zero,Comparatorenable,equal_inequal);
     input  [31:0] ScrA,ScrB;
-    input  [3:0] control;
+    input  [3:0] alu_control;
     output reg [31:0] ALUResult;
 	 output  reg zero;
     input  equal_inequal;
     input  Comparatorenable;
     
 
-always @ (control or ScrA or ScrB)
+always @ (alu_control or ScrA or ScrB)
 begin
 
     ALUResult='d0;
     zero='b0;
 
-    case(control)
+    case(alu_control)
     4'b0000: begin//AND 
 		  zero=0;
         ALUResult = ScrA & ScrB;
