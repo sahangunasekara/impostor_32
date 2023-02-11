@@ -133,3 +133,27 @@ alu alu_module(
     .zero(zero),
     .equalComp(equal_comp)
 	 ); 
+mux_N_bit #(32) jumper (
+		.in0(register_write_data), 
+		.in1(pc_plus4), 
+		.mux_out(write_data), 
+		.control( J_type)
+		);
+mux_N_bit #(32) ALU_mux (
+		.in0(read_data_2), 
+		.in1(immidiate), 
+		.mux_out(ScrB), 
+		.control( ALUsrc)
+		);
+mux_N_bit #(32) data_memory_mux (
+		.in0(ALU_result), 
+		.in1(read_data), 
+		.mux_out(register_write_data), 
+		.control(mem_reg)
+		);
+mux_N_bit #(32) branching_mux (
+		.in0(pc_plus4), 
+		.in1(branch_out), 
+		.mux_out(pc_in), 
+		.control(branch_zero)
+		);
