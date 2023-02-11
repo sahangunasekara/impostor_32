@@ -32,8 +32,8 @@ module register_file (read_addr_1, read_addr_2, write_addr, read_data_1, read_da
 		else if (reg_write == 1'b1) reg_file[write_addr] = write_data; 
 		
 		reg_file[0] = 32'h00000000;
-		reg_file[1] = 32'h0000000a;
-		reg_file[2] = 32'h0000000b;
+		//reg_file[1] = 32'h0000000a;
+		//reg_file[2] = 32'h0000000b;
 	end
 
 	
