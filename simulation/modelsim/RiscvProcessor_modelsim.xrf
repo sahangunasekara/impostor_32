@@ -1,6 +1,7 @@
 vendor_name = ModelSim
 source_file = 1, C:/Data/CSD Processor design/impostor_32/alu.v
 source_file = 1, controller.v
+<<<<<<< HEAD
 source_file = 1, C:/Data/CSD Processor design/impostor_32/alu_control.v
 source_file = 1, C:/Data/CSD Processor design/impostor_32/register_file.v
 source_file = 1, C:/Data/CSD Processor design/impostor_32/maincontroller.v
@@ -253,3 +254,24 @@ instance = comp, \Inst_addr[29]~input\, Inst_addr[29]~input, RV32I, 1
 instance = comp, \Inst_addr[30]~input\, Inst_addr[30]~input, RV32I, 1
 instance = comp, \Inst_addr[31]~input\, Inst_addr[31]~input, RV32I, 1
 instance = comp, \rst~input\, rst~input, RV32I, 1
+=======
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu_control.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/register_file.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/maincontroller.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/data_memory.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/mux_N_bit.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/sign_extension.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/instruction_memory.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/program_counter.v
+source_file = 1, ImmediateGen.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu_add_only.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/main.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/instruction_parser.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/and_gate.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/Itype.v
+source_file = 1, D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/db/RiscvProcessor.cbx.xml
+design_name = main
+instance = comp, \led_indicator~output\, led_indicator~output, main, 1
+instance = comp, \clk~input\, clk~input, main, 1
+instance = comp, \reset~input\, reset~input, main, 1
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c

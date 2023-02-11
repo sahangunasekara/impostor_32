@@ -1,6 +1,11 @@
 Analysis & Synthesis report for RiscvProcessor
+<<<<<<< HEAD
 Sat Feb 11 21:28:50 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+=======
+Sat Feb 11 22:05:37 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 ---------------------
@@ -13,6 +18,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
+<<<<<<< HEAD
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
@@ -27,6 +33,18 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  19. Elapsed Time Per Partition
  20. Analysis & Synthesis Messages
  21. Analysis & Synthesis Suppressed Messages
+=======
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: mux_N_bit:jumper
+ 10. Parameter Settings for User Entity Instance: mux_N_bit:ALU_mux
+ 11. Parameter Settings for User Entity Instance: mux_N_bit:data_memory_mux
+ 12. Parameter Settings for User Entity Instance: mux_N_bit:branching_mux
+ 13. Port Connectivity Checks: "alu_add_only:program_counter_4"
+ 14. Port Connectivity Checks: "maincontroller:maincontroller_module"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 
@@ -50,6 +68,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 
+<<<<<<< HEAD
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
@@ -68,6 +87,26 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
 ; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
+=======
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Feb 11 22:05:37 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; RiscvProcessor                             ;
+; Top-level Entity Name              ; main                                       ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 3                                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -2920,6 +2959,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:sahan"                                                                          ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2927,6 +2967,47 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+=======
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:ALU_mux ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:data_memory_mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:branching_mux ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "alu_add_only:program_counter_4" ;
++-------------+-------+----------+---------------------------+
+; Port        ; Type  ; Severity ; Details                   ;
++-------------+-------+----------+---------------------------+
+; in_b[31..3] ; Input ; Info     ; Stuck at GND              ;
+; in_b[1..0]  ; Input ; Info     ; Stuck at GND              ;
+; in_b[2]     ; Input ; Info     ; Stuck at VCC              ;
++-------------+-------+----------+---------------------------+
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2946,6 +3027,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu_control:ALU_control"                                                            ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -2994,6 +3076,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 
 
+=======
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -3007,9 +3091,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
+<<<<<<< HEAD
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
     Info: Processing started: Sat Feb 11 21:28:42 2023
+=======
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Feb 11 22:05:36 2023
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project1 -c RiscvProcessor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -3030,7 +3120,11 @@ Warning (12019): Can't analyze file -- file sign_extension.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.v
     Info (12023): Found entity 1: instruction_memory File: C:/Data/CSD Processor design/impostor_32/instruction_memory.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
+<<<<<<< HEAD
     Info (12023): Found entity 1: program_counter File: C:/Data/CSD Processor design/impostor_32/program_counter.v Line: 1
+=======
+    Info (12023): Found entity 1: program_counter
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 Warning (12019): Can't analyze file -- file ImmediateGen.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_add_only.v
     Info (12023): Found entity 1: alu_add_only File: C:/Data/CSD Processor design/impostor_32/alu_add_only.v Line: 1
@@ -3039,6 +3133,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.v
 Info (12021): Found 1 design units, including 1 entities, in source file instruction_parser.v
     Info (12023): Found entity 1: instruction_parser File: C:/Data/CSD Processor design/impostor_32/instruction_parser.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
+<<<<<<< HEAD
     Info (12023): Found entity 1: and_gate File: C:/Data/CSD Processor design/impostor_32/and_gate.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file rv32i.v
     Info (12023): Found entity 1: RV32I File: C:/Data/CSD Processor design/impostor_32/RV32I.v Line: 2
@@ -3211,6 +3306,149 @@ Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
     Info: Processing ended: Sat Feb 11 21:28:50 2023
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
+=======
+    Info (12023): Found entity 1: and_gate
+Info (12021): Found 1 design units, including 1 entities, in source file itype.v
+    Info (12023): Found entity 1: Itype
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(16): created implicit net for "funct3"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(164): created implicit net for "branch_zero"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(26): created implicit net for "Inst_addr"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(28): created implicit net for "inst"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(47): created implicit net for "RegW"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(48): created implicit net for "ReadRegData1"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(49): created implicit net for "ReadRegData2"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(54): created implicit net for "Aluop"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(55): created implicit net for "operation"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(63): created implicit net for "MemW"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(64): created implicit net for "MemR"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(77): created implicit net for "ScrB"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(78): created implicit net for "ALUsrc"
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "led_indicator" at main.v(9) has no driver
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_module"
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:instruction_memory_module"
+Warning (10030): Net "Imemory[63..32]" at instruction_memory.v(5) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_module"
+Warning (10240): Verilog HDL Always Construct warning at register_file.v(21): inferring latch(es) for variable "k", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_module"
+Info (12128): Elaborating entity "maincontroller" for hierarchy "maincontroller:maincontroller_module"
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:alu_control_module"
+Warning (10230): Verilog HDL assignment warning at alu_control.v(16): truncated value with size 3 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(20): variable "ALU_En" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(23): variable "alu_op" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at alu_control.v(26): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(72): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(77): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(81): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(85): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(93): case item expression never matches the case expression
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(106): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(117): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(122): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(127): case item expression never matches the case expression
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(137): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(148): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(153): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(158): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(163): case item expression never matches the case expression
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "equal_comp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "mem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "out_to_alu", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out_to_alu[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[1]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[2]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[3]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[1]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[2]" at alu_control.v(20)
+Info (10041): Inferred latch for "equal_comp[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "equal_comp[1]" at alu_control.v(20)
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_module"
+Warning (10235): Verilog HDL Always Construct warning at alu.v(54): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(55): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(68): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(69): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(84): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(85): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (12128): Elaborating entity "mux_N_bit" for hierarchy "mux_N_bit:jumper"
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:branching_and"
+Info (12128): Elaborating entity "alu_add_only" for hierarchy "alu_add_only:program_counter_4"
+Info (12128): Elaborating entity "instruction_parser" for hierarchy "instruction_parser:instruction_parser"
+Warning (10270): Verilog HDL Case Statement warning at instruction_parser.v(18): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rs1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rs2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "imm", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "func", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "func[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[5]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[6]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[7]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[8]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[9]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[10]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[11]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[12]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[13]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[14]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[15]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[16]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[17]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[18]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[19]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[20]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[21]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[22]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[23]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[24]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[25]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[26]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[27]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[28]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[29]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[30]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[31]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[4]" at instruction_parser.v(16)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_indicator" is stuck at GND
+Info (144001): Generated suppressed messages file D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/output_files/RiscvProcessor.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "reset"
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4634 megabytes
+    Info: Processing ended: Sat Feb 11 22:05:37 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 +------------------------------------------+

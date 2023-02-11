@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Timing Analyzer report for RiscvProcessor
 Sat Feb 11 21:29:11 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+=======
+TimeQuest Timing Analyzer report for RiscvProcessor
+Sat Feb 11 22:05:58 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 
 ---------------------
@@ -1497,9 +1503,15 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Timing Analyzer Messages ;
 +--------------------------+
 Info: *******************************************************************
+<<<<<<< HEAD
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
     Info: Processing started: Sat Feb 11 21:29:09 2023
+=======
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sat Feb 11 22:05:56 2023
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 Info: Command: quartus_sta Project1 -c RiscvProcessor
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1580,6 +1592,7 @@ Info (332146): Worst-case hold slack is 0.007
     Info (332119):     0.574               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
+<<<<<<< HEAD
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -1592,5 +1605,15 @@ Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Processing ended: Sat Feb 11 21:29:11 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
+=======
+Info (332140): No Minimum Pulse Width paths to report
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Sat Feb 11 22:05:58 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 
 

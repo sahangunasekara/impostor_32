@@ -1,6 +1,10 @@
 <sld_project_info>
   <project>
+<<<<<<< HEAD
     <hash md5_digest_80b="fd507fcddbb2e658eef5"/>
+=======
+    <hash md5_digest_80b="bc8d4730ed24b596035a"/>
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="RiscvProcessor.sof" usercode="0xFFFFFFFF"/>

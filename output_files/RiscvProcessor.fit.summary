@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 Fitter Status : Successful - Sat Feb 11 21:29:05 2023
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+=======
+Fitter Status : Successful - Sat Feb 11 22:05:49 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+>>>>>>> 1b750815b4104c571d604fb3304d57b48324933c
 Revision Name : RiscvProcessor
 Top-level Entity Name : RV32I
 Family : Cyclone IV E

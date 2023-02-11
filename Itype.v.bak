@@ -4,7 +4,7 @@ module Itype(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_resu
 
 	//PC pc (.clk(clk), .reset(rst))
 	
-  wire [31:0] instruction,ScrB;
+	wire [31:0] instruction;
 	wire [1:0] Alu_op;
 	wire [3:0] out_to_alu;
    wire [1:0] equal_comp;
@@ -22,13 +22,13 @@ module Itype(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_resu
 	wire [3:0] funct;
 	
 	//wire reg_w;
-instruction_memory Instruction_memory (
-	.read_addr(pc_out), 
+	instruction_memory Instruction_memory (
+	.read_addr(Inst_addr), 
 	.clk(clk), 
-	.instruction(instruction)
+	.instruction(inst)
 	);
 instruction_parser instruction_parser(
-		.instruction(instruction),
+		.instruction(inst),
 		.rs1(read_addr_1),
 		.rs2(read_addr_2),
 		.rd(write_addr),
@@ -45,18 +45,17 @@ register_file register_file(
     .write_addr(write_addr),
     .write_data(ALU_result),//..........
     .reg_write(RegW),
-  	.read_data_1(read_data_1),
-    .read_data_2(read_data_2)
+    .read_data_1(ReadRegData1),
+    .read_data_2(ReadRegData2)
 	 );
 	
 alu_control ALU_control (
 	.funct(funct),
-	.alu_op(Alu_op),
-	.out_to_alu(out_to_alu),
+	.alu_op(Aluop),
+	.out_to_alu(operation),
 	.ALU_En(ALU_En),
 	.equal_comp(equal_comp),
 	.mem(mem)
- 
 	);
 maincontroller contr(
 	.Opcode(Opcode),
@@ -64,24 +63,19 @@ maincontroller contr(
 	.MemWrite(MemW), 
 	.MemRead(MemR), 
 	.Branch(Branch), 
-	.ALUSrc( ALUSrc), 
-	.Aluop(Alu_op),
+	.ALUSrc(ALUSrc), 
+	.Aluop(Aluop),
 	.jump(jump), 
 	.ALU_En(ALU_En), 
 	.mem_reg(mem_reg)
 	);
 	
    
-mux_N_bit #(32) ALU_mux (
-		.in0(read_data_2), 
-		.in1(immidiate), 
-		.mux_out(ScrB), 
-		.control(  ALUSrc)
-		);	
+	
 alu sahan(
-  	.ScrA(read_data_1),
-  	.ScrB(ScrB),
-	.alu_control(out_to_alu),
+	.ScrA(ReadRegData1),
+	.ScrB(ReadRegData2),
+	.alu_control(operation),
 	.ALUResult(ALU_result),
 	.zero(zero),
 	.equalComp(equal_comp)
