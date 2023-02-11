@@ -20,9 +20,13 @@ module alu (ScrA,ScrB,alu_control,ALUResult,zero,Comparatorenable,equal_inequal)
     input  [31:0] ScrA,ScrB;
     input  [3:0] alu_control;
     output reg [31:0] ALUResult;
-	 output  reg zero;
-    input  equal_inequal;
-    input  Comparatorenable;
+	output  reg zero;
+    input [1:0]equalComp;
+
+    wire equal_inequal;
+    wire Comparatorenable; 
+
+    assign {equal_inequal,Comparatorenable} = equalComp
     
 
 always @ (alu_control or ScrA or ScrB)
