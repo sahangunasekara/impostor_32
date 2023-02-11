@@ -46,11 +46,11 @@ module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, DATA_
 
                case(DATA_MEM_In)
                3'b001: begin
-                 write_data_in = $unsigned(write_data[7:0]);
+                 write_data_in = $signed(write_data[7:0]);
                    dmemory[shifted_addr] = write_data_in;
                end
                3'b010:begin
-                 write_data_in = $unsigned(write_data[15:0]);
+                 write_data_in = $signed(write_data[15:0]);
                    dmemory[shifted_addr] = write_data_in;
                end
 
