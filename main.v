@@ -157,3 +157,29 @@ mux_N_bit #(32) branching_mux (
 		.mux_out(pc_in), 
 		.control(branch_zero)
 		);
+and_gate branching_and(
+		.branch(branch),
+		.zero(zero),
+		.branch_zero(branch_zero)
+		);
+alu_add_only program_counter_4 (
+		.in_a(pc_out), 
+		.in_b(32'b0100), 
+		.add_out(pc_plus4)
+		); // pc + 4
+		
+alu_add_only pc_branching (
+		.in_a(pc_out), 
+		.in_b(immidiate), 
+		.add_out(branch_out)
+		); 
+		
+instruction_parser instruction_parser(
+		.instruction(instruction),
+		.rs1(read_addr_1),
+		.rs2(read_addr_2),
+		.rd(write_addr),
+		.opcode(Opcode),
+		.imm(immidiate),
+		.func(funct)
+		);
