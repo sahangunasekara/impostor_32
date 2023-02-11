@@ -7,8 +7,8 @@ module instruction_memory (read_addr, instruction, clk);
 	
 	
 	
-	wire [5:0] shifted_read_addr;
-  	assign shifted_read_addr=read_addr[5:0];
+  	wire [7:0] shifted_read_addr;
+  assign shifted_read_addr = read_addr[7:0] >>> 2;
 	assign instruction = Imemory[shifted_read_addr];
 
 	always @(posedge clk)
