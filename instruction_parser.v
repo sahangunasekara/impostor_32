@@ -2,13 +2,13 @@
 module instruction_parser(
 	
   input [31:0] instruction,
-  output reg [5:0] rs1,
-  output reg [5:0] rs2,
-  output reg [5:0] rd,
+  output reg [4:0] rs1,
+  output reg [4:0] rs2,
+  output reg [4:0] rd,
   output reg [6:0] opcode,
   output reg [31:0] imm,
-  output reg [2:0] func3,
-  output reg [3:0] func7
+  output reg [3:0] func,
+  
 );
   
   always @(*)
@@ -22,8 +22,7 @@ module instruction_parser(
 						 rs1 = instruction[19:15];
 						 rs2 = instruction[24:20];
 						 imm = 32'hx;
-						 func3 = instruction[14:12];
-						 func7 = {instruction[14:12],instruction[30]};
+						 func = {instruction[14:12],instruction[30]};
 				end			
 			
 			7'b0000011 :  // I-type load
@@ -32,8 +31,7 @@ module instruction_parser(
 						rs1 = instruction[19:15];
 						rs2 = instruction[24:20];
 						imm = $signed(instruction[11:0]);
-						func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = {instruction[14:12],instruction[30]};
 				end
 			
 			7'b0010011 :  // I-type imm
@@ -42,8 +40,8 @@ module instruction_parser(
 						rs1 = instruction[19:15];
 						rs2 = 5'hx;
 						imm = $signed(instruction[11:0]);	
-						func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = {instruction[14:12],instruction[30]};
+
 				end		
 			
 			
@@ -53,8 +51,8 @@ module instruction_parser(
 						rs1 = instruction[19:15];
 						rs2 = instruction[24:20];
 						imm = $signed({instruction[11:5],instruction[4:0]});	
-						func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = {instruction[14:12],instruction[30]};
+						
 				end
 			
 			
@@ -64,8 +62,8 @@ module instruction_parser(
 						rs1 = instruction[19:15];
 						rs2 = instruction[24:20];
 						imm = $signed({instruction[12],instruction[10:5],instruction[4:1],instruction[11]});	
-						func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = {instruction[14:12],instruction[30]};
+						
 				end
 						
 			
@@ -75,8 +73,7 @@ module instruction_parser(
 						rs1 = 5'hx;
 						rs2 = 5'hx;
 						imm = $signed({instruction[20],instruction[10:1],instruction[11],instruction[19:12]});	
-						//func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = 4'hx;
 				end
 			
 			
@@ -86,8 +83,8 @@ module instruction_parser(
 						rs1 = 5'hx;
 						rs2 = 5'hx;
 						imm = $signed(instruction[31:12]);	
-						//func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = 4'hx;
+						
 				end
 			
 			
@@ -97,8 +94,7 @@ module instruction_parser(
 						rs1 = 5'hx;
 						rs2 = 5'hx;
 						imm = $signed(instruction[31:12]);
-						//func3 = instruction[14:12];
-						//func7 = {instruction[14:12],instruction[30]};
+						func = 4'hx;
 				end
 			
 			

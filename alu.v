@@ -16,7 +16,7 @@
 
 */
 
-module alu (ScrA,ScrB,alu_control,ALUResult,zero,Comparatorenable,equal_inequal);
+module alu (ScrA,ScrB,alu_control,ALUResult,zero,equalComp);
     input  [31:0] ScrA,ScrB;
     input  [3:0] alu_control;
     output reg [31:0] ALUResult;

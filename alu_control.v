@@ -3,8 +3,7 @@
 // data output width: 1 32-bit and one "zero" output
 // control: 4-bit
 // zero: output 1 if all bits of data output is 0
-module alu_control (instr, alu_op, out_to_alu, funct, equal_comp, mem, ALU_En);
-	input [3:0] instr;
+module alu_control (alu_op, out_to_alu, funct, equal_comp, mem, ALU_En);
 	input [1:0] alu_op;
 	input ALU_En;
 	input [3:0] funct;
@@ -16,7 +15,7 @@ module alu_control (instr, alu_op, out_to_alu, funct, equal_comp, mem, ALU_En);
 	
 	assign funct3 = {funct[3:1]};
 	
-	always @ (instr)
+	always @ (funct)
 	begin
 		if (ALU_En == 'b0)begin
 		equal_comp= 2'b00;
