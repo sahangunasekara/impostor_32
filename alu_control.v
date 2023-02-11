@@ -20,8 +20,8 @@ module alu_control (instr,alu_op,out_to_alu, equal_comp, mem, ALU_En);
 	always @ (instr)
 	begin
 		if (ALU_En == 'b0)begin
-		equal_comp=00;
-		mem=000;
+		equal_comp= 2'b00;
+		mem= 3'b000;
 		case (alu_op)
 		2'b00: //Rtype
 			begin 
