@@ -1,6 +1,6 @@
 module instruction_memory (read_addr, instruction, clk);
 	input clk;
-	input [6:0] read_addr;
+  	input [31:0] read_addr;
 	output [31:0] instruction;
 	reg [31:0] Imemory [63:0];
 	integer k;
@@ -8,7 +8,7 @@ module instruction_memory (read_addr, instruction, clk);
 	
 	
 	wire [5:0] shifted_read_addr;
-	assign shifted_read_addr=read_addr[6:2];
+  	assign shifted_read_addr=read_addr[5:0];
 	assign instruction = Imemory[shifted_read_addr];
 
 	always @(posedge clk)
