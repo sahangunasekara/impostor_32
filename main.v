@@ -57,7 +57,6 @@ module main (
 		
 		//ALU
 		wire [31:0] ScrB;
-		wire [31:0] ScrA;
 		wire [31:0] alu_out;
 		
 		//mainconroller
@@ -132,10 +131,10 @@ alu_control alu_control_module(
 
   // Instantiate ALU
 alu alu_module(
-    .ScrA(ScrA),
+    .ScrA(read_data_1),
     .ScrB(ScrB),
     .alu_control(out_to_ALU),
-    .ALUResult(alu_out),
+    .ALUResult(ALU_result),
     .zero(zero),
     .equalComp(equal_comp)
 	 ); 

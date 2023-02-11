@@ -13,14 +13,14 @@ module register_file (read_addr_1, read_addr_2, write_addr, read_data_1, read_da
 	reg [31:0] reg_file [31:0];
 	integer k;
 	
-	//assign reg_file[0] = 32'b0;
-	
 	assign read_data_1 = reg_file[read_addr_1];
 	assign read_data_2 = reg_file[read_addr_2];
+	
 	
 
 	always @(posedge clk or posedge reset) // Or combines the block of reset into the block of posedge clk
 	begin
+
 		if (reset==1'b1)
 		begin
 			for (k=0; k<32; k=k+1) 
@@ -30,7 +30,12 @@ module register_file (read_addr_1, read_addr_2, write_addr, read_data_1, read_da
 		end 
 		
 		else if (reg_write == 1'b1) reg_file[write_addr] = write_data; 
+		
+		reg_file[0] = 32'h00000000;
+		reg_file[1] = 32'h0000000a;
+		reg_file[2] = 32'h0000000b;
 	end
+
 	
 
 endmodule

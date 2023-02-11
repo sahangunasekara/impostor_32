@@ -1,0 +1,36 @@
+
+module RV32I(input clk, input [31:0] Inst_addr, input rst, output [31:0] result);
+
+	//PC pc (.clk(clk), .reset(rst))
+	
+	wire [31:0] inst, ALU_result,ReadRegData1,ReadRegData2;
+	wire [1:0] Aluop;
+	wire [3:0] operation;
+   wire [1:0] equal_comp;
+	wire [2:0] mem;
+	wire RegW, MemW, MemR, Branch, ALUSrc,jump, ALU_En, mem_reg;
+	 
+	assign result = ALU_result;
+	
+	//wire reg_w;
+	instructionmemory Instruction_memory (.addr(Inst_addr), .reset(rst), .instruction(inst));
+	// for R type instruction
+	RegisterFile register_file(
+    .clk(clk),
+    .ReadRegNum1(inst[19:15]),
+    .ReadRegNum2(inst[24:20]),
+    .WriteRegNum(inst[11:7]),
+    .WriteRegData(ALU_result),//..........
+    .RegWrite(RegW),
+    .ReadRegData1(ReadRegData1),
+    .ReadRegData2(ReadRegData2));
+	
+	ALUcontrol ALU_control (.funct({inst[14:12],inst[30]}),.alu_op(Aluop),.operation(operation),.ALU_En(ALU_En),.equal_comp(equal_comp),.mem(mem));
+	
+   controller contr(.Opcode(inst[6:0]),.RegWrite(RegW), .MemWrite(MemW), .MemRead(MemR), .Branch(Branch), .ALUSrc(ALUSrc), .Aluop(Aluop),.jump(jump), .ALU_En(ALU_En), .mem_reg(mem_reg));
+	
+	alu ALU(.ScrA(ReadRegData1),.ScrB(ReadRegData2),.ALU_opcode(operation),.ALUResult(ALU_result),.zero(),.Comparatorenable(equal_comp[0]),.equal_inequal(equal_comp[1]));
+
+   
+
+endmodule
