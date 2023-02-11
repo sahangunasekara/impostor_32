@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RiscvProcessor
-Fri Feb 10 22:33:06 2023
+Sat Feb 11 16:07:20 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Feb 10 22:33:06 2023 ;
+; EDA Netlist Writer Status ; Successful - Sat Feb 11 16:07:20 2023 ;
 ; Revision Name             ; RiscvProcessor                        ;
-; Top-level Entity Name     ; alu_control                           ;
+; Top-level Entity Name     ; main                                  ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Simulation Generated Files                                                     ;
-+--------------------------------------------------------------------------------+
-; Generated Files                                                                ;
-+--------------------------------------------------------------------------------+
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_7_1200mv_85c_slow.vho      ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_7_1200mv_0c_slow.vho       ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_min_1200mv_0c_fast.vho     ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor.vho                        ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_7_1200mv_85c_vhd_slow.sdo  ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_7_1200mv_0c_vhd_slow.sdo   ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_min_1200mv_0c_vhd_fast.sdo ;
-; D:/csd/Imposters/simulation/modelsim/RiscvProcessor_vhd.sdo                    ;
-+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                              ;
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                         ;
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_7_1200mv_85c_slow.vho      ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_7_1200mv_0c_slow.vho       ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_min_1200mv_0c_fast.vho     ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor.vho                        ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_7_1200mv_85c_vhd_slow.sdo  ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_7_1200mv_0c_vhd_slow.sdo   ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_min_1200mv_0c_vhd_fast.sdo ;
+; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/RiscvProcessor_vhd.sdo                    ;
++-----------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Feb 10 22:33:06 2023
+    Info: Processing started: Sat Feb 11 16:07:19 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Project1 -c RiscvProcessor
-Info (204019): Generated file RiscvProcessor_7_1200mv_85c_slow.vho in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_7_1200mv_0c_slow.vho in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_min_1200mv_0c_fast.vho in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor.vho in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_7_1200mv_85c_vhd_slow.sdo in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_7_1200mv_0c_vhd_slow.sdo in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_min_1200mv_0c_vhd_fast.sdo in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RiscvProcessor_vhd.sdo in folder "D:/csd/Imposters/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_7_1200mv_85c_slow.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_7_1200mv_0c_slow.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_min_1200mv_0c_fast.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_7_1200mv_85c_vhd_slow.sdo in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_7_1200mv_0c_vhd_slow.sdo in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_min_1200mv_0c_vhd_fast.sdo in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RiscvProcessor_vhd.sdo in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4559 megabytes
-    Info: Processing ended: Fri Feb 10 22:33:06 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4558 megabytes
+    Info: Processing ended: Sat Feb 11 16:07:20 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

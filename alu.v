@@ -26,7 +26,7 @@ module alu (ScrA,ScrB,alu_control,ALUResult,zero,equalComp);
     wire equal_inequal;
     wire Comparatorenable; 
 
-    assign {equal_inequal,Comparatorenable} = equalComp
+    assign {equal_inequal,Comparatorenable} = equalComp;
     
 
 always @ (alu_control or ScrA or ScrB)

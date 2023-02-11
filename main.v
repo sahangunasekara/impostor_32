@@ -3,30 +3,40 @@ module main (
 
 		input clk,
 		input reset,
+		output led_indicator
 		
-		// control signals
-		wire branch,mem_write, ALU_En, reg_write, ALUsrc, mem_reg, mem_read, J_type, 
-		wire [1:0] ALU_op,
 		
-		//input clknormal,
-		//input clkrf,
+		);
 
-		output led_indicator,
+
+// control signals
+		wire branch;
+		wire mem_write;
+		wire ALU_En;
+		wire reg_write;
+		wire ALUsrc;
+		wire mem_reg;
+		wire mem_read;
+		wire J_type;
+		wire [1:0] ALU_op;
 		
+		//input clknormal;
+		//input clkrf;
+
 		// pc
-		wire [31:0] pc_in,
-		wire [31:0] pc_out,
-		wire [31:0] pc_plus4,
+		wire [31:0] pc_in;
+		wire [31:0] pc_out;
+		wire [31:0] pc_plus4;
 
-		wire [31:0] instruction,
+		wire [31:0] instruction;
 
 		// register file
-		wire [4:0] read_addr_1, 
-		wire [4:0] read_addr_2, 
-		wire [4:0] write_addr,
+		wire [4:0] read_addr_1; 
+		wire [4:0] read_addr_2; 
+		wire [4:0] write_addr;
 		wire [31:0] write_data;
-		wire [31:0] read_data_1,
-		wire [31:0] read_data_2,
+		wire [31:0] read_data_1;
+		wire [31:0] read_data_2;
 		
 		//data memory
 		wire [31:0] ALU_result;
@@ -35,37 +45,34 @@ module main (
 		wire [31:0] register_write_data;
 
 		//ALU controller
-		wire [3:0] out_to_ALU,
-		wire [2:0] mem,
-		wire [1:0] equal_comp,
-		wire [3:0] funct,
+		wire [3:0] out_to_ALU;
+		wire [2:0] mem;
+		wire [1:0] equal_comp;
+		wire [3:0] funct;
 		
 		//Branching ALU block
-		wire [31:0] immidiate,
-		wire [31:0] branch_out,
-		wire zero,
+		wire [31:0] immidiate;
+		wire [31:0] branch_out;
+		wire zero;
 		
 		//ALU
-		wire [31:0] ScrB,
-		wire [31:0] ScrA,
-		wire [31:0] alu_out,
+		wire [31:0] ScrB;
+		wire [31:0] ScrA;
+		wire [31:0] alu_out;
 		
 		//mainconroller
-		wire [6:0] Opcode,
-		);
-
-
-
+		wire [6:0] Opcode;
 // Instantiate the modules
 program_counter program_counter_module (
 	.clk(clk),
+	.reset(reset),
 	.pc_in(pc_in),
 	.pc_out(pc_out)
 	);
 
-instruction memory instruction memory_module (
+instruction_memory instruction_memory_module (
 	.clk(clk),
-	.pc_out(pc_out),
+	.read_addr(pc_out),
 	.instruction(instruction)
 	);
 
@@ -91,7 +98,7 @@ data_memory data_memory_module(
     .clk(clk),
     .mem_read(mem_read),
     .mem_write(mem_write),
-    .DATA_MEM_In(mem)
+    .DATA_MEM_In(mem),
     .read_data(read_data),
     .write_data(read_data_2),
     .addr(ALU_result)
@@ -100,26 +107,25 @@ data_memory data_memory_module(
 
   // Instantiate Control Unit
 maincontroller maincontroller_module(
-    . Opcode( Opcode),
-    . Aluop(ALU_op)
-    . RegWrite(reg_write)
-    . MemWrite(mem_write)
-    . MemRead(mem_read)
-    . Branch(branch)
-    . ALUSrc(ALUsrc)
-    . jump(J_type)
-    . ALU_En(ALU_En)
-    . mem_reg(mem_reg)
-
+    .Opcode( Opcode),
+    .Aluop(ALU_op),
+    .RegWrite(reg_write),
+    .MemWrite(mem_write),
+    .MemRead(mem_read),
+    .Branch(branch),
+    .ALUSrc(ALUsrc),
+    .jump(J_type),
+    .ALU_En(ALU_En),
+    .mem_reg(mem_reg)
   );
 
   // Instantiate ALU Control
 alu_control alu_control_module(
     .alu_op(ALU_op),
-    .out_to_alu(out_to_ALU)
-    .funct(funct)
-    .equal_comp(equal_comp)
-    .mem(mem)
+    .out_to_alu(out_to_ALU),
+    .funct(funct),
+    .equal_comp(equal_comp),
+    .mem(mem),
     .ALU_En(ALU_En)
     // Add other inputs and outputs here
   );
@@ -133,6 +139,7 @@ alu alu_module(
     .zero(zero),
     .equalComp(equal_comp)
 	 ); 
+	 
 mux_N_bit #(32) jumper (
 		.in0(register_write_data), 
 		.in1(pc_plus4), 
@@ -164,7 +171,8 @@ and_gate branching_and(
 		);
 alu_add_only program_counter_4 (
 		.in_a(pc_out), 
-		.in_b(32'b0100), 
+		.in_b($signed(32'b0100)), 
+		//.in_b(32'h0004), 
 		.add_out(pc_plus4)
 		); // pc + 4
 		
@@ -183,3 +191,4 @@ instruction_parser instruction_parser(
 		.imm(immidiate),
 		.func(funct)
 		);
+endmodule

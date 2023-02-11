@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscvProcessor
-Fri Feb 10 23:58:26 2023
+Sat Feb 11 16:07:00 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,12 +13,18 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: mux_N_bit:jumper
+ 10. Parameter Settings for User Entity Instance: mux_N_bit:ALU_mux
+ 11. Parameter Settings for User Entity Instance: mux_N_bit:data_memory_mux
+ 12. Parameter Settings for User Entity Instance: mux_N_bit:branching_mux
+ 13. Port Connectivity Checks: "alu_add_only:program_counter_4"
+ 14. Port Connectivity Checks: "alu:alu_module"
+ 15. Port Connectivity Checks: "maincontroller:maincontroller_module"
+ 16. Port Connectivity Checks: "register_file:register_file_module"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,16 +50,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 10 23:58:26 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 11 16:07:00 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RiscvProcessor                             ;
-; Top-level Entity Name              ; alu_control                                ;
+; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 33                                         ;
-;     Total combinational functions  ; 33                                         ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 44                                         ;
+; Total pins                         ; 3                                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +73,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; alu_control        ; RiscvProcessor     ;
+; Top-level entity name                                                      ; main               ; RiscvProcessor     ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,43 +165,53 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
-; alu_control.v                    ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu_control.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
+; alu.v                            ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu.v                ;         ;
+; alu_control.v                    ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu_control.v        ;         ;
+; register_file.v                  ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/register_file.v      ;         ;
+; maincontroller.v                 ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/maincontroller.v     ;         ;
+; data_memory.v                    ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/data_memory.v        ;         ;
+; mux_N_bit.v                      ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/mux_N_bit.v          ;         ;
+; instruction_memory.v             ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/instruction_memory.v ;         ;
+; program_counter.v                ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/program_counter.v    ;         ;
+; alu_add_only.v                   ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/alu_add_only.v       ;         ;
+; main.v                           ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/main.v               ;         ;
+; instruction_parser.v             ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/instruction_parser.v ;         ;
+; and_gate.v                       ; yes             ; User Verilog HDL File  ; D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/and_gate.v           ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 33              ;
-;                                             ;                 ;
-; Total combinational functions               ; 33              ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 17              ;
-;     -- 3 input functions                    ; 13              ;
-;     -- <=2 input functions                  ; 3               ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 33              ;
-;     -- arithmetic mode                      ; 0               ;
-;                                             ;                 ;
-; Total registers                             ; 0               ;
-;     -- Dedicated logic registers            ; 0               ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 44              ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-; Maximum fan-out node                        ; instr[14]~input ;
-; Maximum fan-out                             ; 14              ;
-; Total fan-out                               ; 166             ;
-; Average fan-out                             ; 1.37            ;
-+---------------------------------------------+-----------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 3     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 3     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,28 +219,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |alu_control               ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |alu_control        ; work         ;
+; |main                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |main               ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; out_to_alu[0]$latch                                ; out_to_alu[0]       ; yes                    ;
-; out_to_alu[1]$latch                                ; out_to_alu[0]       ; yes                    ;
-; out_to_alu[2]$latch                                ; out_to_alu[0]       ; yes                    ;
-; out_to_alu[3]$latch                                ; out_to_alu[0]       ; yes                    ;
-; equal_comp[0]$latch                                ; ALU_En              ; yes                    ;
-; equal_comp[1]$latch                                ; ALU_En              ; yes                    ;
-; mem[0]$latch                                       ; ALU_En              ; yes                    ;
-; mem[1]$latch                                       ; ALU_En              ; yes                    ;
-; mem[2]$latch                                       ; ALU_En              ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -242,14 +239,84 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu_control|Mux1          ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |alu_control|Mux0          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:jumper ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 32    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:ALU_mux ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:data_memory_mux ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_N_bit:branching_mux ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "alu_add_only:program_counter_4" ;
++-------------+-------+----------+---------------------------+
+; Port        ; Type  ; Severity ; Details                   ;
++-------------+-------+----------+---------------------------+
+; in_b[31..3] ; Input ; Info     ; Stuck at GND              ;
+; in_b[1..0]  ; Input ; Info     ; Stuck at GND              ;
+; in_b[2]     ; Input ; Info     ; Stuck at VCC              ;
++-------------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu_module"                                                                          ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; ALUResult ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maincontroller:maincontroller_module"                                                                              ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                  ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; control_signal ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Alu0           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Alu1           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_file:register_file_module"                                                        ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; read_data_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -267,27 +334,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Feb 10 23:58:25 2023
+    Info: Processing started: Sat Feb 11 16:06:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project1 -c RiscvProcessor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: alu
-Info (12021): Found 1 design units, including 1 entities, in source file controller.v
-    Info (12023): Found entity 1: controller
+Warning (12019): Can't analyze file -- file controller.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_control.v
     Info (12023): Found entity 1: alu_control
 Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
     Info (12023): Found entity 1: register_file
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(10): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(11): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(12): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(13): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(15): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(19): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(20): truncated literal to match 8 bits
-Warning (10229): Verilog HDL Expression warning at maincontroller.v(22): truncated literal to match 8 bits
 Info (12021): Found 1 design units, including 1 entities, in source file maincontroller.v
-    Info (12023): Found entity 1: mainController
+    Info (12023): Found entity 1: maincontroller
 Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
     Info (12023): Found entity 1: data_memory
 Info (12021): Found 1 design units, including 1 entities, in source file mux_n_bit.v
@@ -300,112 +358,271 @@ Info (12021): Found 1 design units, including 1 entities, in source file program
     Info (12023): Found entity 1: program_counter
 Info (12021): Found 1 design units, including 1 entities, in source file immediategen.v
     Info (12023): Found entity 1: ImmediateGen
-Info (12021): Found 1 design units, including 1 entities, in source file riscvprocessor.v
-    Info (12023): Found entity 1: RiscvProcessor
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "RegWrite"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "MemWrite"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "MemRead"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "Branch"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "ALUSrc"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "Alu0"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "Alu1"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "jump"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "ALU_En"
-Warning (10236): Verilog HDL Implicit Net warning at maincontroller.v(5): created implicit net for "mem_reg"
-Info (12127): Elaborating entity "alu_control" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(22): variable "ALU_En" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(25): variable "alu_op" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(28): variable "funct" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at alu_control.v(35): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(51): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(55): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(59): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(63): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(67): truncated value with size 32 to match size of target (4)
-Warning (10270): Verilog HDL Case Statement warning at alu_control.v(28): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(74): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at alu_control.v(93): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(98): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(100): truncated value with size 32 to match size of target (4)
-Warning (10270): Verilog HDL Case Statement warning at alu_control.v(74): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(108): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at alu_control.v(117): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(122): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(127): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(132): truncated value with size 32 to match size of target (3)
-Warning (10270): Verilog HDL Case Statement warning at alu_control.v(108): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at alu_control.v(139): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10230): Verilog HDL assignment warning at alu_control.v(143): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(148): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(152): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(153): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(157): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(158): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(162): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(163): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(167): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at alu_control.v(168): truncated value with size 32 to match size of target (2)
-Warning (10270): Verilog HDL Case Statement warning at alu_control.v(139): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at alu_control.v(20): inferring latch(es) for variable "equal_comp", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at alu_control.v(20): inferring latch(es) for variable "mem", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at alu_control.v(20): inferring latch(es) for variable "out_to_alu", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "out_to_alu[0]" at alu_control.v(22)
-Info (10041): Inferred latch for "out_to_alu[1]" at alu_control.v(22)
-Info (10041): Inferred latch for "out_to_alu[2]" at alu_control.v(22)
-Info (10041): Inferred latch for "out_to_alu[3]" at alu_control.v(22)
-Info (10041): Inferred latch for "mem[0]" at alu_control.v(22)
-Info (10041): Inferred latch for "mem[1]" at alu_control.v(22)
-Info (10041): Inferred latch for "mem[2]" at alu_control.v(22)
-Info (10041): Inferred latch for "equal_comp[0]" at alu_control.v(22)
-Info (10041): Inferred latch for "equal_comp[1]" at alu_control.v(22)
-Warning (13012): Latch out_to_alu[0]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alu_op[0]
-Warning (13012): Latch out_to_alu[1]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alu_op[1]
-Warning (13012): Latch out_to_alu[2]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal instr[14]
-Warning (13012): Latch out_to_alu[3]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal alu_op[1]
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 1 design units, including 1 entities, in source file alu_add_only.v
+    Info (12023): Found entity 1: alu_add_only
+Info (12021): Found 1 design units, including 1 entities, in source file main.v
+    Info (12023): Found entity 1: main
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_parser.v
+    Info (12023): Found entity 1: instruction_parser
+Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
+    Info (12023): Found entity 1: and_gate
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(16): created implicit net for "funct3"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(165): created implicit net for "branch_zero"
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (10034): Output port "led_indicator" at main.v(9) has no driver
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_module"
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:instruction_memory_module"
+Warning (10030): Net "Imemory[63..32]" at instruction_memory.v(5) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_module"
+Warning (10240): Verilog HDL Always Construct warning at register_file.v(22): inferring latch(es) for variable "k", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_module"
+Info (12128): Elaborating entity "maincontroller" for hierarchy "maincontroller:maincontroller_module"
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:alu_control_module"
+Warning (10230): Verilog HDL assignment warning at alu_control.v(16): truncated value with size 3 to match size of target (1)
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(20): variable "ALU_En" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(23): variable "alu_op" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at alu_control.v(26): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(72): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(77): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(81): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(85): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(93): case item expression never matches the case expression
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(106): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(117): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(122): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(127): case item expression never matches the case expression
+Warning (10235): Verilog HDL Always Construct warning at alu_control.v(137): variable "funct3" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(148): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(153): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(158): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at alu_control.v(163): case item expression never matches the case expression
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "equal_comp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "mem", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu_control.v(18): inferring latch(es) for variable "out_to_alu", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out_to_alu[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[1]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[2]" at alu_control.v(20)
+Info (10041): Inferred latch for "out_to_alu[3]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[1]" at alu_control.v(20)
+Info (10041): Inferred latch for "mem[2]" at alu_control.v(20)
+Info (10041): Inferred latch for "equal_comp[0]" at alu_control.v(20)
+Info (10041): Inferred latch for "equal_comp[1]" at alu_control.v(20)
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_module"
+Warning (10235): Verilog HDL Always Construct warning at alu.v(54): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(55): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(68): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(69): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(84): variable "Comparatorenable" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at alu.v(85): variable "equal_inequal" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Info (12128): Elaborating entity "mux_N_bit" for hierarchy "mux_N_bit:jumper"
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:branching_and"
+Info (12128): Elaborating entity "alu_add_only" for hierarchy "alu_add_only:program_counter_4"
+Info (12128): Elaborating entity "instruction_parser" for hierarchy "instruction_parser:instruction_parser"
+Warning (10270): Verilog HDL Case Statement warning at instruction_parser.v(18): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rs1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "rs2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "imm", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at instruction_parser.v(16): inferring latch(es) for variable "func", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "func[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "func[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[5]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[6]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[7]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[8]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[9]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[10]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[11]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[12]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[13]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[14]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[15]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[16]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[17]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[18]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[19]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[20]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[21]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[22]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[23]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[24]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[25]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[26]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[27]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[28]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[29]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[30]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "imm[31]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs2[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rs1[4]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[0]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[1]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[2]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[3]" at instruction_parser.v(16)
+Info (10041): Inferred latch for "rd[4]" at instruction_parser.v(16)
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
+    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led_indicator" is stuck at GND
 Info (144001): Generated suppressed messages file D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/output_files/RiscvProcessor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 28 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "instr[0]"
-    Warning (15610): No output dependent on input pin "instr[1]"
-    Warning (15610): No output dependent on input pin "instr[2]"
-    Warning (15610): No output dependent on input pin "instr[3]"
-    Warning (15610): No output dependent on input pin "instr[4]"
-    Warning (15610): No output dependent on input pin "instr[5]"
-    Warning (15610): No output dependent on input pin "instr[6]"
-    Warning (15610): No output dependent on input pin "instr[7]"
-    Warning (15610): No output dependent on input pin "instr[8]"
-    Warning (15610): No output dependent on input pin "instr[9]"
-    Warning (15610): No output dependent on input pin "instr[10]"
-    Warning (15610): No output dependent on input pin "instr[11]"
-    Warning (15610): No output dependent on input pin "instr[15]"
-    Warning (15610): No output dependent on input pin "instr[16]"
-    Warning (15610): No output dependent on input pin "instr[17]"
-    Warning (15610): No output dependent on input pin "instr[18]"
-    Warning (15610): No output dependent on input pin "instr[19]"
-    Warning (15610): No output dependent on input pin "instr[20]"
-    Warning (15610): No output dependent on input pin "instr[21]"
-    Warning (15610): No output dependent on input pin "instr[22]"
-    Warning (15610): No output dependent on input pin "instr[23]"
-    Warning (15610): No output dependent on input pin "instr[24]"
-    Warning (15610): No output dependent on input pin "instr[25]"
-    Warning (15610): No output dependent on input pin "instr[26]"
-    Warning (15610): No output dependent on input pin "instr[27]"
-    Warning (15610): No output dependent on input pin "instr[28]"
-    Warning (15610): No output dependent on input pin "instr[29]"
-    Warning (15610): No output dependent on input pin "instr[31]"
-Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
-    Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Fri Feb 10 23:58:26 2023
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "reset"
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 178 warnings
+    Info: Peak virtual memory: 4634 megabytes
+    Info: Processing ended: Sat Feb 11 16:07:00 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

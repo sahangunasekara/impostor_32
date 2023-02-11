@@ -7,7 +7,7 @@ module instruction_parser(
   output reg [4:0] rd,
   output reg [6:0] opcode,
   output reg [31:0] imm,
-  output reg [3:0] func,
+  output reg [3:0] func
   
 );
   
@@ -15,7 +15,7 @@ module instruction_parser(
   begin
     opcode = instruction[6:0];// extract opcode
 	 
-	 case(Opcode)
+	 case(opcode)
 			7'b0110011 : // R-type
 				begin
 						 rd = instruction[11:7];
