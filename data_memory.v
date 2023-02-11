@@ -1,11 +1,12 @@
-module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, signed_unsigned, mem_size);
+module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, DATA_MEM_In);
 
    input [31:0] addr;
    input [31:0] write_data;
    output reg [31:0] read_data;
 
    input clk, mem_read, mem_write, signed_unsigned;
-   input [1:0] mem_size;
+
+   input [2,0] DATA_MEM_In;
 
    reg [31:0] dmemory [63:0];
    reg [31:0] write_data_in;
@@ -16,7 +17,6 @@ module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, signe
 
    assign shifted_addr = addr[5:0];
 
-   assign DATA_MEM_In = {signed_unsigned,mem_size};
    assign DATA = (mem_read) ? dmemory[addr] : 32'bx;
 
    always @(posedge clk)
