@@ -1,9 +1,0 @@
-module processor(reset);
-	input reset;
-	
-	wire [31:0] pc_in, pc_out;
-	wire [31:0] pc_origin_al, pc_out_unsign_extended, pc_plus4;
-	wire [31:0] instruction;
-	wire [4:0] reg_write_addr;
-	wire [31:0] reg_write_data, reg_read_data; 
-	
