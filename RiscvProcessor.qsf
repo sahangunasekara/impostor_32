@@ -68,3 +68,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name VERILOG_FILE alu_add_only.v
 set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name VERILOG_FILE instruction_parser.v
+set_global_assignment -name VERILOG_FILE and_gate.v
