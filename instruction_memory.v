@@ -18,7 +18,7 @@ module instruction_memory (read_addr, instruction, clk);
 			Imemory[k] = 32'b0;
 		end
 					
-Imemory[0] = 32'b00100000000010000000000000100000; //addi $t0, $zero, 32
+Imemory[0] = 32'b00000000011100001000000110010011; //addi
 Imemory[1] = 32'b00100000000010010000000000110111; //addi $t1, $zero, 55
 Imemory[2] = 32'b00000001000010011000000000100100; //and $s0, $t0, $t1
 Imemory[3] = 32'b00000000000100010110000110110011; //or $s0, $t0, $t1

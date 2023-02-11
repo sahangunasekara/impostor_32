@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RiscvProcessor
-Sat Feb 11 16:07:00 2023
+Sat Feb 11 22:05:37 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -19,12 +19,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  11. Parameter Settings for User Entity Instance: mux_N_bit:data_memory_mux
  12. Parameter Settings for User Entity Instance: mux_N_bit:branching_mux
  13. Port Connectivity Checks: "alu_add_only:program_counter_4"
- 14. Port Connectivity Checks: "alu:alu_module"
- 15. Port Connectivity Checks: "maincontroller:maincontroller_module"
- 16. Port Connectivity Checks: "register_file:register_file_module"
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 14. Port Connectivity Checks: "maincontroller:maincontroller_module"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,7 +48,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 11 16:07:00 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 11 22:05:37 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RiscvProcessor                             ;
 ; Top-level Entity Name              ; main                                       ;
@@ -290,15 +288,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:alu_module"                                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; ALUResult ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "maincontroller:maincontroller_module"                                                                              ;
 +----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -308,15 +297,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Alu0           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; Alu1           ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "register_file:register_file_module"                                                        ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; read_data_1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -334,7 +314,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Feb 11 16:06:59 2023
+    Info: Processing started: Sat Feb 11 22:05:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project1 -c RiscvProcessor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
@@ -356,8 +336,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file instruc
     Info (12023): Found entity 1: instruction_memory
 Info (12021): Found 1 design units, including 1 entities, in source file program_counter.v
     Info (12023): Found entity 1: program_counter
-Info (12021): Found 1 design units, including 1 entities, in source file immediategen.v
-    Info (12023): Found entity 1: ImmediateGen
+Warning (12019): Can't analyze file -- file ImmediateGen.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu_add_only.v
     Info (12023): Found entity 1: alu_add_only
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
@@ -366,15 +345,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file instruc
     Info (12023): Found entity 1: instruction_parser
 Info (12021): Found 1 design units, including 1 entities, in source file and_gate.v
     Info (12023): Found entity 1: and_gate
+Info (12021): Found 1 design units, including 1 entities, in source file itype.v
+    Info (12023): Found entity 1: Itype
 Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(16): created implicit net for "funct3"
-Warning (10236): Verilog HDL Implicit Net warning at main.v(165): created implicit net for "branch_zero"
+Warning (10236): Verilog HDL Implicit Net warning at main.v(164): created implicit net for "branch_zero"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(26): created implicit net for "Inst_addr"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(28): created implicit net for "inst"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(47): created implicit net for "RegW"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(48): created implicit net for "ReadRegData1"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(49): created implicit net for "ReadRegData2"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(54): created implicit net for "Aluop"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(55): created implicit net for "operation"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(63): created implicit net for "MemW"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(64): created implicit net for "MemR"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(77): created implicit net for "ScrB"
+Warning (10236): Verilog HDL Implicit Net warning at Itype.v(78): created implicit net for "ALUsrc"
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Warning (10034): Output port "led_indicator" at main.v(9) has no driver
 Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:program_counter_module"
 Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:instruction_memory_module"
 Warning (10030): Net "Imemory[63..32]" at instruction_memory.v(5) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "register_file" for hierarchy "register_file:register_file_module"
-Warning (10240): Verilog HDL Always Construct warning at register_file.v(22): inferring latch(es) for variable "k", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at register_file.v(21): inferring latch(es) for variable "k", which holds its previous value in one or more paths through the always construct
 Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_memory_module"
 Info (12128): Elaborating entity "maincontroller" for hierarchy "maincontroller:maincontroller_module"
 Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:alu_control_module"
@@ -476,138 +468,6 @@ Info (10041): Inferred latch for "rd[1]" at instruction_parser.v(16)
 Info (10041): Inferred latch for "rd[2]" at instruction_parser.v(16)
 Info (10041): Inferred latch for "rd[3]" at instruction_parser.v(16)
 Info (10041): Inferred latch for "rd[4]" at instruction_parser.v(16)
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[31]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[30]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[29]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[28]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[27]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[26]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[25]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[24]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[23]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[22]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[21]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[20]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[19]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[18]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[17]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[16]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[15]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[14]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[13]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[12]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[11]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[10]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[9]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[8]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[7]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[6]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[5]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[4]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[3]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[2]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[1]" is missing source, defaulting to GND
-    Warning (12110): Net "ALU_result[0]" is missing source, defaulting to GND
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led_indicator" is stuck at GND
@@ -620,9 +480,9 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 178 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
     Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Sat Feb 11 16:07:00 2023
+    Info: Processing ended: Sat Feb 11 22:05:37 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

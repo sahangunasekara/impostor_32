@@ -1,5 +1,5 @@
 Flow report for RiscvProcessor
-Sat Feb 11 16:07:20 2023
+Sat Feb 11 22:05:59 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 11 16:07:20 2023      ;
+; Flow Status                        ; Successful - Sat Feb 11 22:05:59 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RiscvProcessor                             ;
 ; Top-level Entity Name              ; main                                       ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/11/2023 16:06:59 ;
+; Start date & time ; 02/11/2023 22:05:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RiscvProcessor      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------+----------------+-------------+----------------+
 ; Assignment Name                     ; Value                        ; Default Value  ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------+----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 929355265899.167611181911644 ; --             ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 929355265899.167613333619564 ; --             ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                         ; --             ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)       ; <None>         ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --             ; --          ; --             ;
@@ -94,12 +94,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 5068 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4581 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4679 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:17                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5068 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4582 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4675 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

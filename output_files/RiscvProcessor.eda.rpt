@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RiscvProcessor
-Sat Feb 11 16:07:20 2023
+Sat Feb 11 22:05:59 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Feb 11 16:07:20 2023 ;
+; EDA Netlist Writer Status ; Successful - Sat Feb 11 22:05:59 2023 ;
 ; Revision Name             ; RiscvProcessor                        ;
 ; Top-level Entity Name     ; main                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Feb 11 16:07:19 2023
+    Info: Processing started: Sat Feb 11 22:05:59 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Project1 -c RiscvProcessor
 Info (204019): Generated file RiscvProcessor_7_1200mv_85c_slow.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file RiscvProcessor_7_1200mv_0c_slow.vho in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
@@ -100,8 +100,8 @@ Info (204019): Generated file RiscvProcessor_min_1200mv_0c_vhd_fast.sdo in folde
 Info (204019): Generated file RiscvProcessor_vhd.sdo in folder "D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4558 megabytes
-    Info: Processing ended: Sat Feb 11 16:07:20 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Sat Feb 11 22:05:59 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

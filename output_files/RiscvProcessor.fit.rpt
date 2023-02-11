@@ -1,5 +1,5 @@
 Fitter report for RiscvProcessor
-Sat Feb 11 16:07:10 2023
+Sat Feb 11 22:05:49 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sat Feb 11 16:07:10 2023      ;
+; Fitter Status                      ; Successful - Sat Feb 11 22:05:49 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RiscvProcessor                             ;
 ; Top-level Entity Name              ; main                                       ;
@@ -1383,7 +1383,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1392,9 +1392,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/ONEDRIVE/OneDrive - University of Moratuwa/Riscv_Imposters/impostor_32/output_files/RiscvProcessor.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5068 megabytes
-    Info: Processing ended: Sat Feb 11 16:07:11 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Sat Feb 11 22:05:49 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+
