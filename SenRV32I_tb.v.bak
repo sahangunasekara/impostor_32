@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module SenRV32I_tb;
+module RV32I_tb;
 
     reg clk, rst;
 	 reg [31:0]Inst_addr;
@@ -8,7 +8,7 @@ module SenRV32I_tb;
 
     // duration for each bit = 20 * timescale = 20 * 1 ns  = 20ns
     localparam period = 10;  
-    I UUT (clk, Inst_addr, rst, result);
+    top_RV32I UUT (clk, Inst_addr, rst, result);
     
     initial begin
             // values for a and b

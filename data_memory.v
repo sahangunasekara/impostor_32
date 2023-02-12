@@ -60,6 +60,7 @@ module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, DATA_
                endcase
            end
 
-   end
+   //dmemory[3] = 32'h4;
+	end
 
 endmodule

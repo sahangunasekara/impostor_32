@@ -22,7 +22,6 @@ module Itype(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_resu
 	wire [3:0] funct;
 	
 	//wire reg_w;
-	
 instruction_memory Instruction_memory (
 	.read_addr(pc_out), 
 	.clk(clk), 
@@ -87,5 +86,4 @@ alu sahan(
 	.zero(zero),
 	.equalComp(equal_comp)
 	);
-	
 endmodule

@@ -16,7 +16,7 @@ module maincontroller( control_signal, Opcode, Aluop, RegWrite, MemWrite, MemRea
 			7'b1101111 : control_signal <= 10'b10001xx110; // jal-type
 			7'b0110111 : control_signal <= 10'b10001xx010; // lui-type
 			7'b0010111 : control_signal <= 10'b00000xx010; // auipc-type
-			default : control_signal    <= 10'bxxxxxxxxxx;
+			default : control_signal    <= 10'b0000000010;
 		endcase
 		
 	end

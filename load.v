@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module Itype(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_result);
+module load(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_result);
 
 	//PC pc (.clk(clk), .reset(rst))
 	
@@ -20,14 +20,24 @@ module Itype(input clk, input [31:0] pc_out, input reset, output [31:0] ALU_resu
 	wire [6:0] Opcode;
 	wire [31:0] immidiate;
 	wire [3:0] funct;
+	wire [31:0] read_data;
+
+	
 	
 	//wire reg_w;
-	
 instruction_memory Instruction_memory (
 	.read_addr(pc_out), 
 	.clk(clk), 
 	.instruction(instruction)
 	);
+	
+mux_N_bit #(32) data_memory_mux (
+		.in0(ALU_result), 
+		.in1(read_data), 
+		.mux_out(write_data), 
+		.control(mem_reg)
+		);
+
 instruction_parser instruction_parser(
 		.instruction(instruction),
 		.rs1(read_addr_1),
@@ -44,7 +54,7 @@ register_file register_file(
     .read_addr_1(read_addr_1),
     .read_addr_2(read_addr_2),
     .write_addr(write_addr),
-    .write_data(ALU_result),//..........
+    .write_data(write_data),//..........
     .reg_write(RegW),
   	 .read_data_1(read_data_1),
     .read_data_2(read_data_2)
@@ -72,7 +82,17 @@ maincontroller contr(
 	.mem_reg(mem_reg)
 	);
 	
-   
+data_memory data_memory_module(
+    .clk(clk),
+    .mem_read(MemR),
+    .mem_write(MemW),
+    .DATA_MEM_In(mem),
+    .read_data(read_data),
+    .write_data(read_data_2),
+    .addr(ALU_result)
+    // Add other inputs and outputs here
+  );
+  
 mux_N_bit #(32) ALU_mux (
 		.in0(read_data_2), 
 		.in1(immidiate), 
@@ -87,5 +107,4 @@ alu sahan(
 	.zero(zero),
 	.equalComp(equal_comp)
 	);
-	
 endmodule
