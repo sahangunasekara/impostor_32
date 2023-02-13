@@ -1,3 +1,5 @@
+`timescale 1ns/100ps
+
 module program_counter (clk, reset, pc_in, pc_out);
 	input clk, reset;
 	input [31:0] pc_in;

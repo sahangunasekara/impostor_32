@@ -6,7 +6,7 @@ module data_memory (addr, write_data, read_data, clk, mem_read, mem_write, DATA_
    input [2:0] DATA_MEM_In;
    output reg [31:0] read_data;
 
-  reg [31:0] dmemory [64:0];
+  reg [31:0] dmemory [63:0];
    reg [31:0] write_data_in;
 
   wire [5:0] shifted_addr;

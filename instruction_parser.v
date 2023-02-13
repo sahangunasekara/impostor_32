@@ -61,7 +61,7 @@ module instruction_parser(
 						rd = 5'hx;
 						rs1 = instruction[19:15];
 						rs2 = instruction[24:20];
-                  imm = $signed({instruction[31],instruction[7],instruction[30:25],instruction[11:8]});	
+                  imm = $signed({instruction[31],instruction[7],instruction[30:25],instruction[11:8],1'b0});	
 						func = {instruction[14:12],instruction[30]};
 						
 				end

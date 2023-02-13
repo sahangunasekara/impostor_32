@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Feb 12 15:32:20 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : simulatedRV32
+Top-level Entity Name : Itype
+Family : Cyclone IV E
+Total logic elements : 5,368
+    Total combinational functions : 2,904
+    Dedicated logic registers : 2,624
+Total registers : 2624
+Total pins : 58
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

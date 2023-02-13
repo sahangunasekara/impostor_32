@@ -1,14 +1,14 @@
-module segment7(
+module segment(
 input clk,
 input[31:0] ALU_result,
-output reg [6:0]		HEX0,
-output reg[6:0]		HEX1,
-output reg[6:0]		HEX2,
-output reg[6:0]		HEX3,
-output reg[6:0]		HEX4,  	
-output reg[6:0]		HEX5,	
-output reg[6:0]		HEX6,
-output reg[6:0]	HEX7	
+output reg [0:6]		HEX0,
+output reg[0:6]		HEX1,
+output reg[0:6]		HEX2,
+output reg[0:6]		HEX3,
+output reg[0:6]		HEX4,  	
+output reg[0:6]		HEX5,	
+output reg[0:6]		HEX6,
+output reg[0:6]	HEX7	
 
 );
 

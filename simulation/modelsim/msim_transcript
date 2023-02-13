@@ -1,5 +1,5 @@
 # Reading pref.tcl
-# do RiscvProcessor_run_msim_rtl_verilog.do
+# do simulatedRV32_run_msim_rtl_verilog.do
 # if ![file isdirectory verilog_libs] {
 # 	file mkdir verilog_libs
 # }
@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:51 on Feb 11,2023
+# Start time: 15:35:33 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 19:04:52 on Feb 11,2023, Elapsed time: 0:00:01
+# End time: 15:35:34 on Feb 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:52 on Feb 11,2023
+# Start time: 15:35:34 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 19:04:52 on Feb 11,2023, Elapsed time: 0:00:00
+# End time: 15:35:34 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:52 on Feb 11,2023
+# Start time: 15:35:34 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 19:04:52 on Feb 11,2023, Elapsed time: 0:00:00
+# End time: 15:35:34 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:52 on Feb 11,2023
+# Start time: 15:35:35 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 19:04:53 on Feb 11,2023, Elapsed time: 0:00:01
+# End time: 15:35:35 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:53 on Feb 11,2023
+# Start time: 15:35:36 on Feb 12,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 19:04:54 on Feb 11,2023, Elapsed time: 0:00:01
+# End time: 15:35:36 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cycloneive_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cycloneive_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:54 on Feb 11,2023
+# Start time: 15:35:36 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work cycloneive_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cycloneive_atoms.v 
 # -- Compiling UDP CYCLONEIVE_PRIM_DFFE
 # -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS
@@ -547,7 +547,7 @@
 # 	cycloneive_jtag
 # 	cycloneive_crcblock
 # 	cycloneive_oscillator
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:01
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -559,125 +559,294 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/alu.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/alu.v 
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/alu_control.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/alu_control.v 
-# -- Compiling module alu_control
-# 
-# Top level modules:
-# 	alu_control
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/register_file.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
+# Start time: 15:35:37 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/register_file.v 
 # -- Compiling module register_file
 # 
 # Top level modules:
 # 	register_file
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/program_counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/program_counter.v 
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/mux_N_bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/mux_N_bit.v 
+# -- Compiling module mux_N_bit
+# 
+# Top level modules:
+# 	mux_N_bit
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/maincontroller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
+# Start time: 15:35:37 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/maincontroller.v 
 # -- Compiling module maincontroller
 # 
 # Top level modules:
 # 	maincontroller
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/instruction_memory.v}
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/Itype.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/instruction_memory.v 
-# -- Compiling module instruction_memory
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/Itype.v 
+# -- Compiling module Itype
 # 
 # Top level modules:
-# 	instruction_memory
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
+# 	Itype
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/instruction_parser.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
+# Start time: 15:35:37 on Feb 12,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/instruction_parser.v 
 # -- Compiling module instruction_parser
 # 
 # Top level modules:
 # 	instruction_parser
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/RV32I.v}
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/instruction_memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:04:55 on Feb 11,2023
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/RV32I.v 
-# -- Compiling module RV32I
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/instruction_memory.v 
+# -- Compiling module instruction_memory
 # 
 # Top level modules:
-# 	RV32I
-# End time: 19:04:55 on Feb 11,2023, Elapsed time: 0:00:00
+# 	instruction_memory
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vlog -reportprogress 300 -work work {C:/Data/CSD Processor design/impostor_32/RV32I_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/data_memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:05:22 on Feb 11,2023
-# vlog -reportprogress 300 -work work C:/Data/CSD Processor design/impostor_32/RV32I_tb.v 
-# -- Compiling module RV32I_tb
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/data_memory.v 
+# -- Compiling module data_memory
 # 
 # Top level modules:
-# 	RV32I_tb
-# End time: 19:05:22 on Feb 11,2023, Elapsed time: 0:00:00
+# 	data_memory
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.RV32I_tb
-# vsim work.RV32I_tb 
-# Start time: 19:05:28 on Feb 11,2023
-# Loading work.RV32I_tb
-# Loading work.RV32I
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/and_gate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/and_gate.v 
+# -- Compiling module and_gate
+# 
+# Top level modules:
+# 	and_gate
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/alu_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/alu_control.v 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/alu_add_only.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/alu_add_only.v 
+# -- Compiling module alu_add_only
+# 
+# Top level modules:
+# 	alu_add_only
+# End time: 15:35:37 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:37 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 15:35:38 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/segment.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:38 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/segment.v 
+# -- Compiling module segment
+# 
+# Top level modules:
+# 	segment
+# End time: 15:35:38 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Data/CSD\ Processor\ design/impostor_32 {C:/Data/CSD Processor design/impostor_32/Itype_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:35:38 on Feb 12,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Data/CSD Processor design/impostor_32" C:/Data/CSD Processor design/impostor_32/Itype_tb.v 
+# -- Compiling module Itype_tb
+# 
+# Top level modules:
+# 	Itype_tb
+# End time: 15:35:38 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Itype_tb.v
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Itype_tb.v 
+# Start time: 15:35:38 on Feb 12,2023
+# ** Error (suppressible): (vsim-19) Failed to access library 'Itype_tb' at "Itype_tb".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./simulatedRV32_run_msim_rtl_verilog.do PAUSED at line 52
+vsim work.Itype_tb
+# vsim work.Itype_tb 
+# Start time: 15:35:38 on Feb 12,2023
+# Loading work.Itype_tb
+# Loading work.Itype
+# Loading work.segment
 # Loading work.instruction_memory
+# Loading work.program_counter
 # Loading work.instruction_parser
 # Loading work.register_file
 # Loading work.alu_control
 # Loading work.maincontroller
+# Loading work.data_memory
 # Loading work.alu
+# Loading work.mux_N_bit
+# Loading work.and_gate
+# Loading work.alu_add_only
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 10, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: C:/Data/CSD Processor design/impostor_32/Itype.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX6'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX7'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'register_file'.  Expected 9, found 8.
-#    Time: 0 ps  Iteration: 0  Instance: /RV32I_tb/UUT/register_file File: C:/Data/CSD Processor design/impostor_32/RV32I.v Line: 45
-# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/RV32I.v(45): [TFMPC] - Missing connection for port 'reset'.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/register_file File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 69
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(69): [TFMPC] - Missing connection for port 'reset'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'contr'.  Expected 13, found 10.
-#    Time: 0 ps  Iteration: 0  Instance: /RV32I_tb/UUT/contr File: C:/Data/CSD Processor design/impostor_32/RV32I.v Line: 64
-# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/RV32I.v(64): [TFMPC] - Missing connection for port 'control_signal'.
-# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/RV32I.v(64): [TFMPC] - Missing connection for port 'Alu0'.
-# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/RV32I.v(64): [TFMPC] - Missing connection for port 'Alu1'.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/contr File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 89
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'control_signal'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu0'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu1'.
 add wave -position insertpoint  \
-sim:/RV32I_tb/period \
-sim:/RV32I_tb/clk \
-sim:/RV32I_tb/rst \
-sim:/RV32I_tb/Inst_addr \
-sim:/RV32I_tb/result
-# Load canceled
-run -all
+sim:/Itype_tb/clk \
+sim:/Itype_tb/reset \
+sim:/Itype_tb/ALU_result
+run
+run
+add wave -position end  sim:/Itype_tb/UUT/Instruction_memory/instruction
+add wave -position end  sim:/Itype_tb/UUT/Instruction_memory/read_addr
+add wave -position end  sim:/Itype_tb/UUT/sahan/ALUResult
+add wave -position 5  sim:/Itype_tb/UUT/sahan/ScrA
+add wave -position 6  sim:/Itype_tb/UUT/sahan/ScrB
+add wave -position end  sim:/Itype_tb/UUT/register_file/read_addr_1
+add wave -position end  sim:/Itype_tb/UUT/register_file/read_data_1
+add wave -position end  sim:/Itype_tb/UUT/register_file/read_addr_2
+add wave -position end  sim:/Itype_tb/UUT/register_file/read_data_2
+add wave -position end  sim:/Itype_tb/UUT/register_file/write_addr
+add wave -position end  sim:/Itype_tb/UUT/register_file/write_data
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 10, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: C:/Data/CSD Processor design/impostor_32/Itype.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX6'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX7'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'register_file'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/register_file File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 69
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(69): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'contr'.  Expected 13, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/contr File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 89
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'control_signal'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu0'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu1'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/Itype_tb/UUT/jumper/control
+add wave -position end  sim:/Itype_tb/UUT/data_memory_mux/control
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 10, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: C:/Data/CSD Processor design/impostor_32/Itype.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX6'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX7'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'register_file'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/register_file File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 69
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(69): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'contr'.  Expected 13, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/contr File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 89
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'control_signal'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu0'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu1'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 run -continue
+add wave -position end  sim:/Itype_tb/UUT/program_counter_module/pc_in
+add wave -position end  sim:/Itype_tb/UUT/program_counter_module/pc_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 10, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: C:/Data/CSD Processor design/impostor_32/Itype.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT File: C:/Data/CSD Processor design/impostor_32/Itype_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX4'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX5'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX6'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype_tb.v(7): [TFMPC] - Missing connection for port 'HEX7'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'register_file'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/register_file File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 69
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(69): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'contr'.  Expected 13, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /Itype_tb/UUT/contr File: C:/Data/CSD Processor design/impostor_32/Itype.v Line: 89
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'control_signal'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu0'.
+# ** Warning: (vsim-3722) C:/Data/CSD Processor design/impostor_32/Itype.v(89): [TFMPC] - Missing connection for port 'Alu1'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 run -continue
-run -all
-run -all
-run -all
-run -all
-run -all
 run
-run -all
-run -all
-run
-run
-# End time: 20:56:42 on Feb 11,2023, Elapsed time: 1:51:14
-# Errors: 0, Warnings: 6
+# ** Note: $stop    : C:/Data/CSD Processor design/impostor_32/Itype_tb.v(15)
+#    Time: 415 ns  Iteration: 0  Instance: /Itype_tb
+# Break in Module Itype_tb at C:/Data/CSD Processor design/impostor_32/Itype_tb.v line 15
+# End time: 07:41:14 on Feb 13,2023, Elapsed time: 16:05:36
+# Errors: 0, Warnings: 15
